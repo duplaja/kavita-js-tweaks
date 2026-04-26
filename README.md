@@ -19,7 +19,7 @@ This was tested with Nginx reverse proxy in front of the Dockerized install. It 
 
 3. Download `kavita-encrypt-secrets.html` and run locally, using your installId as the password.
 
-4. Generate replacement strings for (ENCRYPTED)[https://github.com/duplaja/kavita-js-tweaks/blob/17d1029205a624a8295445b8ab737b66b36c41ca/kavita-custom-tweaks.js#L6]
+4. Generate replacement strings for (ENCRYPTED) https://github.com/duplaja/kavita-js-tweaks/blob/17d1029205a624a8295445b8ab737b66b36c41ca/kavita-custom-tweaks.js#L6
 
 5. Put somewhere accessible to your webserver.
 
