@@ -30,7 +30,6 @@ This was tested with Nginx reverse proxy in front of the Dockerized install. It 
             alias /path/to/your/file/kavita-custom-tweaks.js;
         }
 
-        # Everything else — inject the script
         location / {
 
             sub_filter '</head>'
