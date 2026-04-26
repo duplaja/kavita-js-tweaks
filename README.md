@@ -26,7 +26,7 @@ This was tested with Nginx reverse proxy in front of the Dockerized install. It 
 6. Add the following to the relevant parts of your Nginx server block (can adjust for other setups):
 
    ```nginx
-   location = /kavita-custom-tweaks.js {
+        location = /kavita-custom-tweaks.js {
             alias /path/to/your/file/kavita-custom-tweaks.js;
         }
 
