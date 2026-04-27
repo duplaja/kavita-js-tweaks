@@ -113,20 +113,6 @@
     }
   }
 
-
-  // ===== ROUTE GATING =====
-  function isLoggedInRoute() {
-    const path = window.location.pathname;
-    if (path === '/login' || path.startsWith('/login') ||
-        path === '/registration' || path.startsWith('/registration') ||
-        path.startsWith('/confirm-email') ||
-        path.startsWith('/confirm-reset-password') ||
-        path === '/' || path === '') {
-      return false;
-    }
-    return true;
-  }
-
   // ===== MOTD =====
   function showMotdIfNeeded() {
     if (!motd || !motd.id) return;
@@ -370,7 +356,7 @@
     scheduled = true;
     requestAnimationFrame(() => {
       scheduled = false;
-      if (isLoggedInRoute() && decrypted) addMenuItems();
+      if (decrypted) addMenuItems();
     });
   }
 
@@ -379,7 +365,6 @@
   let motdShown = false;
 
   async function runTweaks() {
-    if (!isLoggedInRoute()) return;
 
     const ok = await ensureDecrypted();
     if (!ok) return; // not logged in yet, or decryption failed: try again on next route change
